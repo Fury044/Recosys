@@ -19,7 +19,8 @@ origins = [
     "http://127.0.0.1:3000",
     "http://127.0.0.1:3001",
     "http://127.0.0.1:5173",
-    "https://690b7d04b5adea427e7005a9--reco-sys.netlify.app/",  # Replace with actual Netlify URL
+    # Production frontend
+    "https://reco-sys.netlify.app",
 ]
 
 app.add_middleware(
