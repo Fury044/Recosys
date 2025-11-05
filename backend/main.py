@@ -46,3 +46,13 @@ app.include_router(tmdb_router, prefix="/api", tags=["tmdb"])
 @app.get("/health")
 async def health():
     return {"status": "ok"}
+
+
+# Helpful API root so /api doesn't 404
+@app.get("/api")
+async def api_root():
+    return {"status": "ok", "message": "API root", "endpoints": [
+        "/api/recommendations/",
+        "/api/recommendations/trending",
+        "/health"
+    ]}
